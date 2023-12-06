@@ -18,6 +18,7 @@ services:
     image: consensys/web3signer:develop
     restart: always
     command:
+      - --http-host-allowlist=*
       - eth2
       - --keystores-path=/validator_keys
       - --keystores-password-file=/validator_keys/passwords.txt
